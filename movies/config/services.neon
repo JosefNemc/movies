@@ -1,0 +1,11 @@
+services:
+	- App\Router\RouterFactory::createRouter
+	- App\Model\Movies
+	- App\Services\ApiController
+
+
+search:
+	-	in: %appDir%
+		classes:
+			- *Factory
+			- *Facade

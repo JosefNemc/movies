@@ -1,0 +1,10 @@
+{block content}
+	<h1>{$title}</h1>
+	<p>Seznam filmů</p>
+	<ul>
+		{foreach $movies as $movie}
+			{var $id = $movie->id}
+			<li><a href="{link home:movie, $id}">{$movie->title}</a></li>
+		{/foreach}
+	</ul>
+{/block}
